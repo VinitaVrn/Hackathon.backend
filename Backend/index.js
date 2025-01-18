@@ -12,7 +12,7 @@ app.use("/users",userRouter)
 app.use("/foods",foodRouter)
 
 app.listen(9000,async()=>{
-    await mongoose.connect("mongodb://127.0.0.1:27017");
+    await mongoose.connect("mongodb+srv://vinitaveerani:6vMLzhfGOwHaRjqg@foodcount.4dzb2.mongodb.net/?retryWrites=true&w=majority&appName=Foodcount");
     console.log("Database connected");
     console.log("server started at http://localhost:9000")
 })

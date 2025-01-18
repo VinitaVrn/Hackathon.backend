@@ -54,5 +54,5 @@ export const getcalories=async (req,res)=>{
  }
 }
 
-export {getdishes,addish,getcalories}
+
 
