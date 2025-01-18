@@ -3,8 +3,8 @@ import jwt from "jsonwebtoken"
 import argon2 from "argon2";
 
 const register=async (req, res)=>{
-    const {Name,Username,Email,Password}=req.body;
-    if(!Username||!Password||!Name||!Email){
+    const {Name,Email,Password}=req.body;
+    if(!Password||!Name||!Email){
         return res.status(400).json({msg:"Bad request"})
     }
     
@@ -28,8 +28,8 @@ const register=async (req, res)=>{
 }
 
 const login=async(req,res)=>{
-    const {Username,Password}=req.body;
-    if(!Username ||!Password){
+    const {Email,Password}=req.body;
+    if(!Email ||!Password){
         return res.status(400).json({msg:"Bad request"})
     }
     const userdata=await user.findOne({username:Username});
