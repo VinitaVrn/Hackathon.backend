@@ -15,11 +15,13 @@ items:[
         quantity:{
             type:String,
             default:"1 serving"
+        },
+        calories:{
+            type:Number
         }
     }
     
-],
-QRcode:String
+]
 })
 
 const dishes=model("dish",dishSchema)
