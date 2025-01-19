@@ -4,6 +4,7 @@ dotenv.config();
 import mongoose from "mongoose"
 import { userRouter } from "./router/user.route.js";
 import { foodRouter } from "./router/food.route.js";
+import cors from "cors"
 const app=express();
 
 app.use(cors())
