@@ -6,7 +6,7 @@ import { userRouter } from "./router/user.route.js";
 import { foodRouter } from "./router/food.route.js";
 const app=express();
 
-// app.use(cors())
+app.use(cors())
 app.use(express.json())
 app.use("/users",userRouter)
 app.use("/foods",foodRouter)
